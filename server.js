@@ -45,7 +45,8 @@ app.get('/index', (req, res) => {
 require('./app/routes.js')(app);
 
 //Listen on port 3000
-var port = 3000;
+const port=process.env.PORT || 3000
+//var port = 3000;
 server = app.listen(port);
 //app.listen(port);
 console.log("App listening on port " + port);
