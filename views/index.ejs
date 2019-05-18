@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+    <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>RZ Chat App</title>
+  </head>
+
+  <body>
+      <h1 class="center" style="margin-right: 20px;">RZ Chat</h1>
+      <h5 style="text-align: center" class="pulse">Developed by Raj Kumar <a href="https://www.facebook.com/RAJKUMAR.RZ" target="_blank" class="fab fa-facebook-square" style="color: #3b5998;"></a> <a href="https://www.linkedin.com/in/rajkumarrz/" target="_blank" class="fab fa-linkedin" style="color: #0077B5;"> </a> <a href="https://github.com/RAJKUMARRZ/" target="_blank" class="fab fa-github" style="color: #211f1f;"></a></h5>
+
+    <section>
+       <div id="change_username" class="row">
+        <div class="input-field">
+	     <input id="username" type="text" class="col s6 m6 l3" />
+       <label for="username">UserName</label></div>
+	     <button id="send_username" type="button" class="waves-effect waves-light btn col s6 m4 l2">Change username</button>
+        </div>
+    </section>
+
+    <section id="chatroom">
+      <section id="feedback"></section>
+    </section>
+
+    
+
+    <section id="input_zone"> 
+      <div class="row">
+      <input id="message" class="vertical-align col s10 m10 l10" type="text" />
+      <button id="send_message" type="button" class="waves-effect waves-light btn col s2 m2 l1">Send</button>
+      </div>
+    </section>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
