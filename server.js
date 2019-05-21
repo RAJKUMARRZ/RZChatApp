@@ -2,19 +2,12 @@ var express = require('express')
 var app = express()
 var ejs = require('ejs');
 
-var mongoose = require('mongoose'); 
-var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);            // set the port
-var database = require('./app/database');            // load the database config
+var mongoose = require('mongoose');            // load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var multer = require('multer');
 path = require('path');
-
-// configuration ===============================================================
-mongoose.connect(database.localUrl);    // Connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
-var db = mongoose.connection;
 
 //app.use(express.static('./uploads'));       // set the static files location /public/img will be /img for users
 app.use(morgan('dev')); // log every request to the console
@@ -33,16 +26,9 @@ app.use(express.static('public'))
 
 //routes
 app.get('/', (req, res) => {
-	res.render('login')
+	res.render('index')
 })
 
-app.get('/index', (req, res) => {
-    res.render('index')
-})
-
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: false }));
-require('./app/routes.js')(app);
 
 //Listen on port 3000
 const port=process.env.PORT || 3000
