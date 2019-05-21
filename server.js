@@ -2,7 +2,6 @@ var express = require('express')
 var app = express()
 var ejs = require('ejs');
 
-var mongoose = require('mongoose');            // load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
