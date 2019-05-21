@@ -36,7 +36,7 @@ const port=process.env.PORT || 3000
 server = app.listen(port);
 //app.listen(port);
 console.log("App listening on port " + port);
-
+//var socket = io.connect('http://localhost:3000')
 
 
 //socket.io instantiation
