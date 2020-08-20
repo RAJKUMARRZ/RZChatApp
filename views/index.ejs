@@ -32,6 +32,14 @@ webengage.track("Added To Cart", {
 "Price" : 399.99,
 });
 
+webengage.onReady(function () {
+    webengage.webpush.prompt();
+    
+    webengage.webpush.onSubscribe(function () {
+        alert('Thanks! You are now subscribed');
+    });
+});
+
 webengage.user.login('RZUniqueId');
 webengage.user.logout();
 </script>
