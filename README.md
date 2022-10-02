@@ -1,5 +1,5 @@
 # RZChatApp
-Node Chat application which uses websocket (Socket.io) to create two way communication
+A Chat application which uses websocket (Socket.io) at server side along with NodeJS to create two way communication
 for demo, click here https://rz-chat-application.herokuapp.com/
 
 # Screenshots
