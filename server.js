@@ -3,16 +3,15 @@ var app = express()
 var ejs = require('ejs');
 
 var morgan = require('morgan');
-var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var multer = require('multer');
 path = require('path');
 
 //app.use(express.static('./uploads'));       // set the static files location /public/img will be /img for users
 app.use(morgan('dev')); // log every request to the console
-app.use(bodyParser.urlencoded({'extended': 'true'})); // parse application/x-www-form-urlencoded
-app.use(bodyParser.json()); // parse application/json
-app.use(bodyParser.json({type: 'application/vnd.api+json'})); // parse application/vnd.api+json as json
+app.use(express.urlencoded({'extended': 'true'})); // parse application/x-www-form-urlencoded
+app.use(express.json()); // parse application/json
+app.use(express.json({type: 'application/vnd.api+json'})); // parse application/vnd.api+json as json
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 
